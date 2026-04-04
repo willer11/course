@@ -36,3 +36,8 @@ models:
       +materialized: table
     src:
       +materialized: ephemeral
+
+data_tests:
+  +store_failures: true
+  #if we want a specific schema to be created and used to store tests failure i can specify it here
+  +schema : _test_failures
