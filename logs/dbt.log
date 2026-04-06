@@ -144,3 +144,239 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m11:10:07.446161 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf33230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bf8c3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bfbd150>]}
 [0m11:10:07.446306 [debug] [MainThread]: Flushing usage events
 [0m11:10:07.834560 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:45:55.153830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x108537380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109acb750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109acb4d0>]}
+
+
+============================== 13:45:55.156452 | ff9f4857-7955-432c-8186-6da50eed0415 ==============================
+[0m13:45:55.156452 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:45:55.156710 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'version_check': 'True', 'no_print': 'None', 'log_format': 'default', 'fail_fast': 'False', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt deps', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'target_path': 'None', 'empty': 'None', 'indirect_selection': 'eager', 'partial_parse': 'True', 'profiles_dir': '/Users/mehdisimohammed/.dbt', 'write_json': 'True', 'introspect': 'True', 'static_parser': 'True', 'warn_error': 'None', 'debug': 'False', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'printer_width': '80', 'quiet': 'False'}
+[0m13:45:55.157001 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:45:55.158001 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.033150043, "process_in_blocks": "0", "process_kernel_time": 0.080761, "process_mem_max_rss": "113360896", "process_out_blocks": "0", "process_user_time": 0.499675}
+[0m13:45:55.158172 [debug] [MainThread]: Command `dbt deps` failed at 13:45:55.158141 after 0.03 seconds
+[0m13:45:55.158290 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109afa060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b6c3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109b84490>]}
+[0m13:45:55.158398 [debug] [MainThread]: Flushing usage events
+[0m13:45:55.566484 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:46:30.715453 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10be5f380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3eb750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d3eb4d0>]}
+
+
+============================== 13:46:30.717278 | 608f61c7-63c1-4f13-9a4c-8afb532fc2d6 ==============================
+[0m13:46:30.717278 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:46:30.717525 [debug] [MainThread]: running dbt with arguments {'log_format': 'default', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'write_json': 'True', 'printer_width': '80', 'fail_fast': 'False', 'invocation_command': "dbt compile --inline SELECT * FROM {{ ref('dim_listings_cleansed') }} WHERE {{ no_empty_strings(ref('dim_listings_cleansed')) }}", 'cache_selected_only': 'False', 'empty': 'False', 'log_cache_events': 'False', 'introspect': 'True', 'use_experimental_parser': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'partial_parse': 'True', 'profiles_dir': '/Users/mehdisimohammed/.dbt', 'debug': 'False', 'use_colors': 'True', 'log_path': 'logs', 'warn_error': 'None', 'version_check': 'True', 'target_path': 'None', 'no_print': 'None'}
+[0m13:46:30.717740 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:46:30.718777 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.032827333, "process_in_blocks": "0", "process_kernel_time": 0.082857, "process_mem_max_rss": "114360320", "process_out_blocks": "0", "process_user_time": 0.489888}
+[0m13:46:30.718951 [debug] [MainThread]: Command `dbt compile` failed at 13:46:30.718917 after 0.03 seconds
+[0m13:46:30.719063 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d422060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d498290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d4ac490>]}
+[0m13:46:30.719172 [debug] [MainThread]: Flushing usage events
+[0m13:46:31.090815 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:46:49.822418 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1088fb380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e83750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109e834d0>]}
+
+
+============================== 13:46:49.824271 | 88f4faa3-4d4a-4706-9f83-bf65d57161be ==============================
+[0m13:46:49.824271 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:46:49.824520 [debug] [MainThread]: running dbt with arguments {'use_colors': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'write_json': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'log_path': 'logs', 'printer_width': '80', 'indirect_selection': 'eager', 'fail_fast': 'False', 'version_check': 'True', 'empty': 'None', 'invocation_command': 'dbt deps', 'partial_parse': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'target_path': 'None', 'no_print': 'None', 'log_cache_events': 'False', 'profiles_dir': '/Users/mehdisimohammed/.dbt', 'quiet': 'False', 'introspect': 'True', 'debug': 'False'}
+[0m13:46:49.824885 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:46:49.825960 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.034212876, "process_in_blocks": "0", "process_kernel_time": 0.085984, "process_mem_max_rss": "113688576", "process_out_blocks": "0", "process_user_time": 0.522427}
+[0m13:46:49.826151 [debug] [MainThread]: Command `dbt deps` failed at 13:46:49.826114 after 0.03 seconds
+[0m13:46:49.826270 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109ebe060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f283b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109f48490>]}
+[0m13:46:49.826377 [debug] [MainThread]: Flushing usage events
+[0m13:46:50.195087 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:46:53.782218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x107c17380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109197750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091974d0>]}
+
+
+============================== 13:46:53.783929 | 3cd8a96d-4e6e-4d99-961f-7997da436494 ==============================
+[0m13:46:53.783929 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:46:53.784180 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'partial_parse': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'empty': 'False', 'debug': 'False', 'no_print': 'None', 'log_path': 'logs', 'quiet': 'False', 'invocation_command': "dbt compile --inline SELECT * FROM {{ ref('dim_listings_cleansed') }} WHERE {{ no_empty_strings(ref('dim_listings_cleansed')) }}", 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'write_json': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'warn_error': 'None', 'static_parser': 'True', 'target_path': 'None', 'profiles_dir': '/Users/mehdisimohammed/.dbt', 'use_experimental_parser': 'False', 'version_check': 'True', 'printer_width': '80', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m13:46:53.784385 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:46:53.785392 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.031826418, "process_in_blocks": "0", "process_kernel_time": 0.075815, "process_mem_max_rss": "113737728", "process_out_blocks": "0", "process_user_time": 0.487852}
+[0m13:46:53.785566 [debug] [MainThread]: Command `dbt compile` failed at 13:46:53.785531 after 0.03 seconds
+[0m13:46:53.785675 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1091da060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109238290>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109264490>]}
+[0m13:46:53.785791 [debug] [MainThread]: Flushing usage events
+[0m13:46:54.154252 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:47:36.358718 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10ccb7380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e23f750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e23f4d0>]}
+
+
+============================== 13:47:36.360799 | cd3695ee-5685-4ebb-ba11-d5d13c809214 ==============================
+[0m13:47:36.360799 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:47:36.361043 [debug] [MainThread]: running dbt with arguments {'quiet': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'log_format': 'default', 'version_check': 'True', 'no_print': 'None', 'warn_error': 'None', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'partial_parse': 'True', 'profiles_dir': '/Users/mehdisimohammed/.dbt', 'empty': 'None', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'invocation_command': 'dbt deps', 'static_parser': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'log_path': 'logs', 'debug': 'False', 'target_path': 'None'}
+[0m13:47:36.361403 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m13:47:36.362580 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": false, "command_wall_clock_time": 0.037953418, "process_in_blocks": "0", "process_kernel_time": 0.089255, "process_mem_max_rss": "113885184", "process_out_blocks": "0", "process_user_time": 0.539073}
+[0m13:47:36.362791 [debug] [MainThread]: Command `dbt deps` failed at 13:47:36.362752 after 0.04 seconds
+[0m13:47:36.362937 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e27a060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e2f43b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10e304490>]}
+[0m13:47:36.363069 [debug] [MainThread]: Flushing usage events
+[0m13:47:36.751125 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:48:23.101089 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1083ef380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109987750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099874d0>]}
+
+
+============================== 13:48:23.102821 | a2c794d2-9413-4232-8859-80a9ac457e63 ==============================
+[0m13:48:23.102821 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:48:23.103072 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'warn_error': 'None', 'log_format': 'default', 'introspect': 'True', 'write_json': 'True', 'empty': 'None', 'target_path': 'None', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'printer_width': '80', 'partial_parse': 'True', 'static_parser': 'True', 'log_path': 'logs', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'profiles_dir': '/Users/mehdisimohammed/.dbt', 'no_print': 'None', 'cache_selected_only': 'False', 'quiet': 'False', 'invocation_command': 'dbt debug', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m13:48:23.108193 [info ] [MainThread]: dbt version: 1.11.7
+[0m13:48:23.108312 [info ] [MainThread]: python version: 3.13.12
+[0m13:48:23.108462 [info ] [MainThread]: python path: /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/.venv/bin/python
+[0m13:48:23.108619 [info ] [MainThread]: os info: macOS-26.3.1-arm64-arm-64bit-Mach-O
+[0m13:48:23.108731 [info ] [MainThread]: Using profiles dir at /Users/mehdisimohammed/.dbt
+[0m13:48:23.108822 [info ] [MainThread]: Using profiles.yml file at /Users/mehdisimohammed/.dbt/profiles.yml
+[0m13:48:23.108912 [info ] [MainThread]: Using dbt_project.yml file at /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml
+[0m13:48:23.109014 [info ] [MainThread]: Configuration:
+[0m13:48:23.109102 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m13:48:23.109189 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:48:23.109273 [info ] [MainThread]: Required dependencies:
+[0m13:48:23.109399 [debug] [MainThread]: Executing "git --help"
+[0m13:48:23.121077 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:48:23.121449 [debug] [MainThread]: STDERR: "b''"
+[0m13:48:23.121567 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:48:23.121678 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m13:48:23.121852 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m13:48:23.121946 [info ] [MainThread]: dbt looked for a profiles.yml file in /Users/mehdisimohammed/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m13:48:23.122055 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml> not found
+
+[0m13:48:23.123292 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.050560664, "process_in_blocks": "0", "process_kernel_time": 0.09, "process_mem_max_rss": "114524160", "process_out_blocks": "0", "process_user_time": 0.505474}
+[0m13:48:23.123514 [debug] [MainThread]: Command `dbt debug` failed at 13:48:23.123468 after 0.05 seconds
+[0m13:48:23.123705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x1099b3230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a0c3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x109a3d150>]}
+[0m13:48:23.123853 [debug] [MainThread]: Flushing usage events
+[0m13:48:23.495099 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:48:44.906544 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10a6bb380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc53750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc534d0>]}
+
+
+============================== 13:48:44.908587 | 73753927-2e4b-48bf-99ac-83c1beee840a ==============================
+[0m13:48:44.908587 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:48:44.908843 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'partial_parse': 'True', 'use_colors': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'introspect': 'True', 'invocation_command': 'dbt debug', 'quiet': 'False', 'printer_width': '80', 'warn_error': 'None', 'write_json': 'True', 'log_path': 'logs', 'debug': 'False', 'empty': 'None', 'profiles_dir': '/Users/mehdisimohammed/.dbt', 'log_format': 'default', 'version_check': 'True', 'target_path': 'None', 'cache_selected_only': 'False', 'use_experimental_parser': 'False'}
+[0m13:48:44.913434 [info ] [MainThread]: dbt version: 1.11.7
+[0m13:48:44.913591 [info ] [MainThread]: python version: 3.13.12
+[0m13:48:44.913681 [info ] [MainThread]: python path: /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/.venv/bin/python
+[0m13:48:44.913766 [info ] [MainThread]: os info: macOS-26.3.1-arm64-arm-64bit-Mach-O
+[0m13:48:44.913854 [info ] [MainThread]: Using profiles dir at /Users/mehdisimohammed/.dbt
+[0m13:48:44.913931 [info ] [MainThread]: Using profiles.yml file at /Users/mehdisimohammed/.dbt/profiles.yml
+[0m13:48:44.914009 [info ] [MainThread]: Using dbt_project.yml file at /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml
+[0m13:48:44.914091 [info ] [MainThread]: Configuration:
+[0m13:48:44.914168 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m13:48:44.914250 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:48:44.914326 [info ] [MainThread]: Required dependencies:
+[0m13:48:44.914430 [debug] [MainThread]: Executing "git --help"
+[0m13:48:44.926630 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:48:44.927093 [debug] [MainThread]: STDERR: "b''"
+[0m13:48:44.927226 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:48:44.927356 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m13:48:44.927558 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m13:48:44.927660 [info ] [MainThread]: dbt looked for a profiles.yml file in /Users/mehdisimohammed/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m13:48:44.927786 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml> not found
+
+[0m13:48:44.929067 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.08014258, "process_in_blocks": "0", "process_kernel_time": 0.096232, "process_mem_max_rss": "114671616", "process_out_blocks": "0", "process_user_time": 0.53639}
+[0m13:48:44.929321 [debug] [MainThread]: Command `dbt debug` failed at 13:48:44.929275 after 0.08 seconds
+[0m13:48:44.929523 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bc7f230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bcdc3b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10bd09150>]}
+[0m13:48:44.929693 [debug] [MainThread]: Flushing usage events
+[0m13:48:45.298902 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:49:11.537997 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c73b380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcd3750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcd34d0>]}
+
+
+============================== 13:49:11.539820 | 0335266e-52e8-42ef-815b-51caeb19a13f ==============================
+[0m13:49:11.539820 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:49:11.540075 [debug] [MainThread]: running dbt with arguments {'empty': 'None', 'static_parser': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'log_path': 'logs', 'quiet': 'False', 'version_check': 'True', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'cache_selected_only': 'False', 'fail_fast': 'False', 'log_cache_events': 'False', 'partial_parse': 'True', 'profiles_dir': '/Users/mehdisimohammed/.dbt', 'log_format': 'default', 'printer_width': '80', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'warn_error': 'None', 'write_json': 'True'}
+[0m13:49:11.544298 [info ] [MainThread]: dbt version: 1.11.7
+[0m13:49:11.544420 [info ] [MainThread]: python version: 3.13.12
+[0m13:49:11.544628 [info ] [MainThread]: python path: /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/.venv/bin/python
+[0m13:49:11.544799 [info ] [MainThread]: os info: macOS-26.3.1-arm64-arm-64bit-Mach-O
+[0m13:49:11.544906 [info ] [MainThread]: Using profiles dir at /Users/mehdisimohammed/.dbt
+[0m13:49:11.544992 [info ] [MainThread]: Using profiles.yml file at /Users/mehdisimohammed/.dbt/profiles.yml
+[0m13:49:11.545073 [info ] [MainThread]: Using dbt_project.yml file at /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml
+[0m13:49:11.545165 [info ] [MainThread]: Configuration:
+[0m13:49:11.545243 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m13:49:11.545320 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:49:11.545396 [info ] [MainThread]: Required dependencies:
+[0m13:49:11.545516 [debug] [MainThread]: Executing "git --help"
+[0m13:49:11.557743 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:49:11.558205 [debug] [MainThread]: STDERR: "b''"
+[0m13:49:11.558356 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:49:11.558500 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m13:49:11.558678 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m13:49:11.558783 [info ] [MainThread]: dbt looked for a profiles.yml file in /Users/mehdisimohammed/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m13:49:11.558882 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml> not found
+
+[0m13:49:11.560116 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.053255, "process_in_blocks": "0", "process_kernel_time": 0.096306, "process_mem_max_rss": "114868224", "process_out_blocks": "0", "process_user_time": 0.552844}
+[0m13:49:11.560324 [debug] [MainThread]: Command `dbt debug` failed at 13:49:11.560283 after 0.05 seconds
+[0m13:49:11.560518 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dcff230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd583b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10dd89150>]}
+[0m13:49:11.560681 [debug] [MainThread]: Flushing usage events
+[0m13:49:12.465279 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m13:49:29.726021 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10c163380>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6fb750>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d6fb4d0>]}
+
+
+============================== 13:49:29.727832 | c5f848cc-ab47-4dea-8858-2078f613c6c3 ==============================
+[0m13:49:29.727832 [info ] [MainThread]: Running with dbt=1.11.7
+[0m13:49:29.728081 [debug] [MainThread]: running dbt with arguments {'indirect_selection': 'eager', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'write_json': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'target_path': 'None', 'log_cache_events': 'False', 'empty': 'None', 'profiles_dir': '/Users/mehdisimohammed/.dbt', 'warn_error': 'None', 'quiet': 'False', 'introspect': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt debug', 'printer_width': '80', 'log_path': 'logs', 'partial_parse': 'True', 'debug': 'False', 'use_colors': 'True'}
+[0m13:49:29.732045 [info ] [MainThread]: dbt version: 1.11.7
+[0m13:49:29.732166 [info ] [MainThread]: python version: 3.13.12
+[0m13:49:29.732271 [info ] [MainThread]: python path: /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/.venv/bin/python
+[0m13:49:29.732371 [info ] [MainThread]: os info: macOS-26.3.1-arm64-arm-64bit-Mach-O
+[0m13:49:29.732467 [info ] [MainThread]: Using profiles dir at /Users/mehdisimohammed/.dbt
+[0m13:49:29.732597 [info ] [MainThread]: Using profiles.yml file at /Users/mehdisimohammed/.dbt/profiles.yml
+[0m13:49:29.732686 [info ] [MainThread]: Using dbt_project.yml file at /Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml
+[0m13:49:29.732793 [info ] [MainThread]: Configuration:
+[0m13:49:29.732887 [info ] [MainThread]:   profiles.yml file [[31mERROR not found[0m]
+[0m13:49:29.732975 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m13:49:29.733066 [info ] [MainThread]: Required dependencies:
+[0m13:49:29.733203 [debug] [MainThread]: Executing "git --help"
+[0m13:49:29.744583 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m13:49:29.744994 [debug] [MainThread]: STDERR: "b''"
+[0m13:49:29.745148 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m13:49:29.745277 [info ] [MainThread]: Connection test skipped since no profile was found
+[0m13:49:29.745471 [info ] [MainThread]: [31m2 checks failed:[0m
+[0m13:49:29.745571 [info ] [MainThread]: dbt looked for a profiles.yml file in /Users/mehdisimohammed/.dbt/profiles.yml, but did
+not find one. For more information on configuring your profile, consult the
+documentation:
+
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m13:49:29.745673 [info ] [MainThread]: Project loading failed for the following reason:
+ project path </Users/mehdisimohammed/Documents/Formations/New dbt course AIRBNB/code_repo/course/dbt_project.yml> not found
+
+[0m13:49:29.747145 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": false, "command_wall_clock_time": 0.050137334, "process_in_blocks": "0", "process_kernel_time": 0.084212, "process_mem_max_rss": "114491392", "process_out_blocks": "0", "process_user_time": 0.5071}
+[0m13:49:29.747409 [debug] [MainThread]: Command `dbt debug` failed at 13:49:29.747363 after 0.05 seconds
+[0m13:49:29.747769 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d727230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7803b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x10d7b1150>]}
+[0m13:49:29.747965 [debug] [MainThread]: Flushing usage events
+[0m13:49:30.118978 [debug] [MainThread]: An error was encountered while trying to flush usage events

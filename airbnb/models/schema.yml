@@ -1,6 +1,7 @@
 models:
   - name: dim_listings_cleansed
-#here is a generi test on the model (minimum number of rows)
+    description: Cleansed table which contains Airbnb listings.
+#here is a generic test on the model (minimum number of rows)
     data_tests:
     - minimum_row_count:
         arguments :
@@ -12,11 +13,13 @@ models:
     columns:
 
      - name: listing_id
+       description: Primary key for the listing
        data_tests:
          - unique
          - not_null
 
      - name: host_id
+       description: The hosts's id. References the host table.
        data_tests:
          - not_null
          - relationships:
@@ -25,6 +28,7 @@ models:
                field: host_id
 
      - name: room_type
+       description: Type of the apartment / room
        data_tests:
          - accepted_values:
              arguments:
@@ -34,21 +38,39 @@ models:
                         'Hotel room']
     
      - name: minimum_nights
+       description: '{{doc("dim_listing_cleansed__minimum_nights")}}'
        data_tests:
          - positive_values
       
 #this enforced contract aim to record/register the model structure, so every tile the model is created it is compared to this structure to ensure it respects it 
   - name: dim_hosts_cleansed
+    description: Cleansed table which contains Airbnb hosts.
+    
     config:
         contract:
           enforced: true
+
     columns:
       - name: host_id
         data_type: integer
+        description: The id of the host. This is the primary key.
+        tests:
+          - not_null
+          - unique
+
       - name: host_name
         data_type: string
+        description: The name of the host
+        tests:
+          - not_null
+
       - name: is_superhost
         data_type: string
+        description: Defines whether the hosts is a superhost.
+        tests:
+          - accepted_values:
+              values: ['t', 'f']
+              
       - name: updated_at
         data_type: timestamp
       - name: created_at
