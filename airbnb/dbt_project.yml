@@ -1,4 +1,3 @@
-
 # Name your project! Project names should contain only lowercase characters
 # and underscores. A good package name should reflect your organization's
 # name or the intended use of these models
@@ -30,8 +29,20 @@ clean-targets:         # directories to be removed by `dbt clean`
 # In this example config, we tell dbt to build all models in the example/
 # directory as views. These settings can be overridden in the individual model
 # files using the `{{ config(...) }}` macro.
+
+# This is a HOOK to create the audit_log table at the first dbt run execution 
+on-run-start:
+  - "CREATE TABLE IF NOT EXISTS {{ target.schema }}.audit_log ( model_name STRING, run_timestamp TIMESTAMP )"
+
 models:
   airbnb:
+  #This is to grant select on every newly created model to the 2 roles
+    +grants:
+      select: ["transform", "reporter"]
+    #this is another hook to insert a record tracing in the audit_log table each new created model and the time it was created
+    +post-hook:
+      - "INSERT INTO {{ target.schema }}.audit_log VALUES ('{{ this }}', CURRENT_TIMESTAMP)"
+
     +materialized: view
     dim:
       +materialized: table
@@ -41,4 +52,6 @@ models:
 data_tests:
   +store_failures: true
   #if we want a specific schema to be created and used to store tests failure i can specify it here
-  +schema : _test_failures
+  +schema: _test_failures
+flags:
+  require_generic_test_arguments_property: true
