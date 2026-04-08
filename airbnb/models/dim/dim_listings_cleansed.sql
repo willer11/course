@@ -10,7 +10,7 @@ WITH src_listings AS (
     {{ ref('src_listings') }}
 )
 SELECT
-  listing_id,
+  listing_id, 
   listing_name,
   room_type,
   CASE

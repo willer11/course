@@ -36,6 +36,7 @@ on-run-start:
 
 models:
   airbnb:
+    +static_analysis: strict
   #This is to grant select on every newly created model to the 2 roles
     +grants:
       select: ["transform", "reporter"]
