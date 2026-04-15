@@ -1,3 +1,8 @@
+{{ config(
+    tags=["listings_with_hosts"]
+) }}
+
+
 WITH
 l AS (
     SELECT

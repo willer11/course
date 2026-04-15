@@ -36,8 +36,10 @@ on-run-start:
 
 models:
   airbnb:
-    +static_analysis: strict
-  #This is to grant select on every newly created model to the 2 roles
+    #+materialized: incremental #il est possible de definir que tous les modéles de mon projet seront de type incermental 
+    #+incremental_strategy: append #ici je definis la strategy d'incrementation
+    #+static_analysis: strict. # VERY IMPRTANT : this is for dbt fusion to work correctly
+   #This is to grant select on every newly created model to the 2 roles
     +grants:
       select: ["transform", "reporter"]
     #this is another hook to insert a record tracing in the audit_log table each new created model and the time it was created

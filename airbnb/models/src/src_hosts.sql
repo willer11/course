@@ -1,3 +1,7 @@
+{{ config(
+    tags=["hosts_source"]
+) }}
+
 WITH raw_hosts AS (
     SELECT
         *

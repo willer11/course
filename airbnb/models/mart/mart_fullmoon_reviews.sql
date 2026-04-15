@@ -1,6 +1,8 @@
 {{ config(
   materialized = 'table',
+  alias= 'fullmoon_reviews'
 ) }}
+ -- ALIAS is to rename a model diffrent from the sql filename
 
 WITH fct_reviews AS (
     SELECT * FROM {{ ref('fct_reviews') }}

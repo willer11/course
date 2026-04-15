@@ -1,6 +1,7 @@
 models:
   - name: dim_listings_cleansed
     description: Cleansed table which contains Airbnb listings.
+    #deprecation_date: 2026-04-13
 #here is a generic test on the model (minimum number of rows)
     data_tests:
       - minimum_row_count:
